@@ -3,7 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ST Studio — 智賦工作室</title>
+<title>智賦工作室 ST Studio — 企業 AI 轉型夥伴</title>
+<link rel="icon" type="image/png" href="ST logo.png">
+
+<!-- SEO -->
+<meta name="description" content="智賦工作室（ST Studio）協助企業與政府規劃 AI 發展藍圖，客製開發專屬 AI 平台、知識管理系統、SCADA 平台與數位治理解決方案，深耕 AI 研發自 2017 年，位於台中市。">
+<meta name="keywords" content="AI轉型,企業AI,智賦工作室,ST Studio,知識管理,SCADA,生成式AI,數位治理,AI平台,台中AI">
+<meta name="author" content="智賦工作室 ST Studio">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.sait-studio.com/">
+
+<!-- Open Graph（Facebook / Line 分享預覽） -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="智賦工作室 ST Studio — 企業 AI 轉型夥伴">
+<meta property="og:description" content="協助企業與政府規劃 AI 發展藍圖，客製開發專屬 AI 平台與數位治理解決方案。">
+<meta property="og:image" content="橫式LOGO.png">
+<meta property="og:url" content="https://smartandtalent.github.io/">
+<meta property="og:locale" content="zh_TW">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="智賦工作室 ST Studio — 企業 AI 轉型夥伴">
+<meta name="twitter:description" content="協助企業與政府規劃 AI 發展藍圖，客製開發專屬 AI 平台與數位治理解決方案。">
+<meta name="twitter:image" content="橫式LOGO.png">
+
+<!-- JSON-LD 結構化資料 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "智賦工作室 ST Studio",
+  "alternateName": "ST Studio",
+  "url": "https://smartandtalent.github.io/",
+  "logo": "橫式LOGO.png",
+  "description": "協助企業與政府規劃 AI 發展藍圖，客製開發專屬 AI 平台與數位治理解決方案。",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "公益路二段 61 號 3 樓之 3",
+    "addressLocality": "台中市南屯區",
+    "postalCode": "408355",
+    "addressCountry": "TW"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "aitu@aishareu.com",
+    "contactType": "customer service"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -397,11 +445,87 @@
 
   /* ── PRODUCTS ── */
   #products { background: var(--bg); }
+  .products-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  /* 右欄：垂直跑馬燈 */
+  .products-marquee-wrap {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+    border-radius: 8px;
+    clip-path: inset(0 round 8px);
+  }
+  .products-marquee-wrap::before,
+  .products-marquee-wrap::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .products-marquee-wrap::before {
+    top: 0;
+    background: linear-gradient(to bottom, var(--bg) 10%, transparent);
+  }
+  .products-marquee-wrap::after {
+    bottom: 0;
+    background: linear-gradient(to top, var(--bg) 10%, transparent);
+  }
+  .products-marquee-track {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: productsMarquee 20s linear infinite;
+  }
+  .products-marquee-track:hover { animation-play-state: paused; }
+  @keyframes productsMarquee {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+  .products-marquee-slide {
+    flex-shrink: 0;
+    position: relative;
+  }
+  .products-marquee-slide-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    position: absolute;
+    bottom: 0.7rem;
+    left: 0.8rem;
+    color: #fff;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    z-index: 3;
+  }
+  .products-marquee-slide img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .products-marquee-slide img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
   }
 
   .product-card {
@@ -558,17 +682,26 @@
   }
   .product-marquee-item {
     width: 400px;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     flex-shrink: 0;
-    border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .product-marquee-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
   }
   .product-marquee-item img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.06);
+    display: block;
   }
 
   /* ── EXPERIENCE ── */
@@ -919,7 +1052,8 @@
     .competition-card { grid-template-columns: 1fr; }
     .hero-stats { display: none; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
-    .products-grid { grid-template-columns: 1fr; }
+    .products-layout { grid-template-columns: 1fr; }
+    .products-marquee-wrap { display: none; }
     .services-grid { grid-template-columns: 1fr; }
     .partners-strip { grid-template-columns: repeat(2,1fr); }
     .exp-item { grid-template-columns: minmax(min-content, 180px) 1fr; }
@@ -994,7 +1128,7 @@
   <div class="about-grid">
     <div class="about-text reveal">
       <p>
-        智賦工作室 是一個專注於協助 <strong style="color:var(--amber)">企業與政府 AI 轉型</strong> 的工作室，位於台中市南屯區。
+        ST Studio 是一個專注於協助 <strong style="color:var(--amber)">企業與政府 AI 轉型</strong> 的工作室，位於台中市南屯區。
       </p>
       <p>
         我們深入了解每個企業的核心需求與產業特性，協助規劃最適合的 AI 發展路徑，並客製開發專屬 AI 平台，讓企業從策略規劃到落地實作，都有最可靠的技術夥伴相伴。
@@ -1029,64 +1163,63 @@
     客製打造專屬 AI 平台與解決方案。
   </p>
 
-  <div class="products-grid">
+  <div class="products-layout">
 
-    <div class="product-card reveal">
-      <div class="product-icon">🦯</div>
-      <div class="product-name">AI Cane</div>
-      <div class="product-desc">
-        智慧輔助導航系統，結合環境感知與 AI 判斷，提供使用者安全、直觀的行動輔助體驗，實現人機無縫互動。
+    <!-- 左欄：4 張產品卡 -->
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="product-icon">🦯</div>
+        <div class="product-name">AI Cane</div>
+        <div class="product-desc">
+          智慧輔助導航系統，結合環境感知與 AI 判斷，提供使用者安全、直觀的行動輔助體驗，實現人機無縫互動。
+        </div>
+        <div class="product-tag">智慧輔助</div>
       </div>
-      <div class="product-tag">智慧輔助</div>
+      <div class="product-card reveal">
+        <div class="product-icon">🌿</div>
+        <div class="product-name">Environment AI Expert</div>
+        <div class="product-desc">
+          環境領域 AI 知識管理平台，整合生成式 AI、關鍵字萃取與知識本體架構，協助政府與企業快速獲取精準決策建議。
+        </div>
+        <div class="product-tag">環境科技</div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-icon">🎓</div>
+        <div class="product-name">AI Video Learning System</div>
+        <div class="product-desc">
+          AI 驅動的企業內部教育訓練平台，透過對話式互動與影片結合，讓員工以沉浸式情境學習提升培訓效率。
+        </div>
+        <div class="product-tag">企業培訓</div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-icon">⚙️</div>
+        <div class="product-name">Cross-brand SCADA</div>
+        <div class="product-desc">
+          跨品牌IoT整合資料採集系統，透過邊緣運算整合現場資料並上傳雲端，實現即時遠端監控與預測性維護。
+        </div>
+        <div class="product-tag">工業物聯網</div>
+      </div>
     </div>
 
-    <div class="product-card reveal">
-      <div class="product-icon">🌿</div>
-      <div class="product-name">Environment AI Expert</div>
-      <div class="product-desc">
-        環境領域 AI 知識管理平台，整合生成式 AI、關鍵字萃取與知識本體架構，協助政府與企業快速獲取精準決策建議。
+    <!-- 右欄：垂直跑馬燈 -->
+    <div class="products-marquee-wrap">
+      <div class="products-marquee-track">
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">AI 智慧引導</div><img src="跑馬燈_AI智慧引導.png" alt="AI智慧引導" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">SCADA</div><img src="跑馬燈_SCADA.png" alt="SCADA" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">企業數據管理系統</div><img src="跑馬燈_企業數據管理系統.png" alt="企業數據管理系統" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">AICane</div><img src="跑馬燈_AICane.png" alt="AICane" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">知識網絡</div><img src="跑馬燈_知識網絡.png" alt="知識網絡" onclick="openLightbox(this.src)"></div>
+        <!-- 複製讓滾動無縫 -->
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">AI 智慧引導</div><img src="跑馬燈_AI智慧引導.png" alt="AI智慧引導" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">SCADA</div><img src="跑馬燈_SCADA.png" alt="SCADA" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">企業數據管理系統</div><img src="跑馬燈_企業數據管理系統.png" alt="企業數據管理系統" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">AICane</div><img src="跑馬燈_AICane.png" alt="AICane" onclick="openLightbox(this.src)"></div>
+        <div class="products-marquee-slide"><div class="products-marquee-slide-label">知識網絡</div><img src="跑馬燈_知識網絡.png" alt="知識網絡" onclick="openLightbox(this.src)"></div>
       </div>
-      <div class="product-tag">環境科技</div>
-    </div>
-
-
-    <div class="product-card reveal">
-      <div class="product-icon">🎓</div>
-      <div class="product-name">AI Video Learning System</div>
-      <div class="product-desc">
-        AI 驅動的企業內部教育訓練平台，透過對話式互動與影片結合，讓員工以沉浸式情境學習提升培訓效率。
-      </div>
-      <div class="product-tag">企業培訓</div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-icon">⚙️</div>
-      <div class="product-name">Cross-brand SCADA</div>
-      <div class="product-desc">
-        跨品牌IoT整合資料採集系統，透過邊緣運算整合現場資料並上傳雲端，實現即時遠端監控與預測性維護。
-      </div>
-      <div class="product-tag">工業物聯網</div>
     </div>
 
   </div>
 </section>
-
-<!-- PRODUCT MARQUEE -->
-<div class="product-marquee-wrap">
-  <div class="product-marquee-track">
-      <div class="product-marquee-item"><img src="跑馬燈_AI智慧引導.png" alt="AI智慧引導"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_SCADA.png" alt="SCADA"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_企業數據管理系統.png" alt="企業數據管理系統"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_產品照片.png" alt="產品照片"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_知識網絡.png" alt="知識網絡"></div>
-      <!-- 複製讓滾動無縫 -->
-      <div class="product-marquee-item"><img src="跑馬燈_AI智慧引導.png" alt="AI智慧引導"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_SCADA.png" alt="SCADA"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_企業數據管理系統.png" alt="企業數據管理系統"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_產品照片.png" alt="產品照片"></div>
-      <div class="product-marquee-item"><img src="跑馬燈_知識網絡.png" alt="知識網絡"></div>
-  </div>  
-</div>
 
 <!-- COMPETITION -->
 <section id="competition">
