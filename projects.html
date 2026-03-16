@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>過去實績 — 智賦工作室 ST Studio</title>
+<link rel="icon" type="image/png" href="ST logo.png">
+<meta name="description" content="智賦工作室過去實績：政府計畫、企業合作、研究專案，涵蓋環境 AI、知識管理、IoT 整合等領域。">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo"><a href="index.html"><img src="橫式LOGO.png" alt="智賦工作室"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html#about">關於我們</a></li>
+    <li><a href="index.html#products">產品</a></li>
+    <li><a href="projects.html" class="active">過去實績</a></li>
+    <li><a href="awards.html">競賽榮譽</a></li>
+    <li><a href="team.html">團隊</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">聯絡我們</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="hero-grid"></div>
+  <div class="section-label">Research & Projects</div>
+  <h1 class="page-title">過去實績</h1>
+  <p class="page-desc">橫跨政府機關、學術機構與企業，我們在 AI 應用、環境治理與數位轉型領域累積了豐富的實戰經驗。</p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="exp-list">
+    <div class="exp-item reveal">
+      <div class="exp-org">環境部環境管理署 EPA</div>
+      <div>
+        <div class="exp-title">115年環境執法智慧查核推動暨知識管理數位化計畫</div>
+        <div class="exp-year">2026-2027</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">經濟部水利署 WRA</div>
+      <div>
+        <div class="exp-title">115年度供水改善行政支援計畫</div>
+        <div class="exp-year">2026</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">浚清企業股份有限公司</div>
+      <div>
+        <div class="exp-title">內部教育訓練知識對答平台</div>
+        <div class="exp-year">2025-2026</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">國立聯合大學 NUU</div>
+      <div>
+        <div class="exp-title">跨廠牌IoT整合系統</div>
+        <div class="exp-year">2025</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">國科會 NSTC</div>
+      <div>
+        <div class="exp-title">人性化的智慧公害污染陳情回覆技術建置</div>
+        <div class="exp-year">2025–2026</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">環境部環境管理署 EPA</div>
+      <div>
+        <div class="exp-title">公害污染陳情管理系統暨環境執法智慧決策中心藍圖規劃計畫</div>
+        <div class="exp-year">2025</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">工業技術研究院 ITRI</div>
+      <div>
+        <div class="exp-title">精進智慧判煙系統及輔導落地執法作業 / 船舶影像辨識服務</div>
+        <div class="exp-year">2025</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">國科會 NSTC</div>
+      <div>
+        <div class="exp-title">利用可信任人工智慧引擎建置水資源環境知識管理技術</div>
+        <div class="exp-year">2024</div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-org">科技部 MOST</div>
+      <div>
+        <div class="exp-title">台灣空氣品質大數據監測平台、機器學習與政策模擬之跨領域研究</div>
+        <div class="exp-year">2017–2020</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">智賦工作室 ST<span>.</span>Studio</div>
+  <div class="footer-copy">© 2025 ST Studio. All rights reserved.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.borderBottomColor = window.scrollY > 50
+      ? 'rgba(46,130,160,0.25)'
+      : 'rgba(46,130,160,0.12)';
+  });
+</script>
+</body>
+</html>
