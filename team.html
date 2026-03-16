@@ -37,7 +37,7 @@
 <!-- TEAM -->
 <section id="team">
   <div class="section-label">Members</div>
-  <!-- <h2 class="section-title">夥伴</h2> -->
+  <h2 class="section-title">夥伴</h2>
 
   <!-- 卡片列表（預設顯示） -->
   <div class="team-grid">
@@ -55,16 +55,16 @@
       </div>
     </div>
 
-    <div class="member-card reveal" onclick="toggleMember(this, 'detail-1')">
+    <div class="member-card reveal" style="cursor:default;">
       <div class="member-avatar">👨‍💻</div>
-      <div class="member-name">林瓏穎 LungYing</div>
+      <div class="member-name">林瓏穎 Lung Ying</div>
       <div class="member-title">技術長</div>
       <div class="member-skills">
         <span class="skill-tag">客製化人工智慧技術</span>
       </div>
     </div>
 
-    <div class="member-card reveal" onclick="toggleMember(this, 'detail-2')">
+    <div class="member-card reveal" style="cursor:default;">
       <div class="member-avatar">👩‍💼</div>
       <div class="member-name">廖沁蓉 Sena Liao</div>
       <div class="member-title">專案經理</div>
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="member-card reveal" onclick="toggleMember(this, 'detail-3')">
+    <div class="member-card reveal" style="cursor:default;">
       <div class="member-avatar">👨‍💻</div>
       <div class="member-name">王昱捷 Ethan Wang</div>
       <div class="member-title">AI工程師</div>
@@ -84,7 +84,7 @@
       </div>
     </div>
 
-    <div class="member-card reveal" onclick="toggleMember(this, 'detail-4')">
+    <div class="member-card reveal" style="cursor:default;">
       <div class="member-avatar">👨‍💻</div>
       <div class="member-name">曾建豫 Jacky Tseng</div>
       <div class="member-title">AI工程師</div>
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <div class="member-card reveal" onclick="toggleMember(this, 'detail-5')">
+    <div class="member-card reveal" style="cursor:default;">
       <div class="member-avatar">👨‍💼</div>
       <div class="member-name">劉柏均 Bob Liu</div>
       <div class="member-title">財務管理師</div>
@@ -197,119 +197,6 @@
     </div>
   </div>
 
-  <div class="member-expand" id="detail-2">
-    <div class="member-profile">
-      <div class="member-sidebar">
-        <div class="member-avatar">👩‍💼</div>
-        <div class="member-name">廖沁蓉 Sena Liao</div>
-        <div class="member-title">專案經理</div>
-        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
-          <span class="skill-tag">跨領域系統整合與設計</span>
-          <span class="skill-tag">環境系統分析</span>
-        </div>
-      </div>
-      <div class="member-main">
-        <div>
-          <div class="member-section-label">簡介</div>
-          <div class="member-bio">
-            （待補充）
-          </div>
-        </div>
-      </div>
-      <button class="member-close" onclick="closeMember('detail-2')">✕ 收合</button>
-    </div>
-  </div>
-
-  <div class="member-expand" id="detail-3">
-    <div class="member-profile">
-      <div class="member-sidebar">
-        <div class="member-avatar">👨‍💻</div>
-        <div class="member-name">王昱捷 Ethan Wang</div>
-        <div class="member-title">AI工程師</div>
-        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
-          <span class="skill-tag">後端系統開發</span>
-          <span class="skill-tag">AI工具開發</span>
-        </div>
-      </div>
-      <div class="member-main">
-        <div>
-          <div class="member-section-label">簡介</div>
-          <div class="member-bio">
-            （待補充）
-          </div>
-        </div>
-      </div>
-      <button class="member-close" onclick="closeMember('detail-3')">✕ 收合</button>
-    </div>
-  </div>
-
-  <div class="member-expand" id="detail-4">
-    <div class="member-profile">
-      <div class="member-sidebar">
-        <div class="member-avatar">👨‍💻</div>
-        <div class="member-name">曾建豫 Jacky Tseng</div>
-        <div class="member-title">AI工程師</div>
-        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
-          <span class="skill-tag">知識推論設計</span>
-          <span class="skill-tag">企業知識庫之AI工具開發</span>
-        </div>
-      </div>
-      <div class="member-main">
-        <div>
-          <div class="member-section-label">簡介</div>
-          <div class="member-bio">
-            （待補充）
-          </div>
-        </div>
-      </div>
-      <button class="member-close" onclick="closeMember('detail-4')">✕ 收合</button>
-    </div>
-  </div>
-
-  <div class="member-expand" id="detail-5">
-    <div class="member-profile">
-      <div class="member-sidebar">
-        <div class="member-avatar">👨‍💼</div>
-        <div class="member-name">劉柏均 Bob Liu</div>
-        <div class="member-title">財務管理師</div>
-        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
-          <span class="skill-tag">財務決策資訊系統規劃</span>
-          <span class="skill-tag">環境資訊分析</span>
-        </div>
-      </div>
-      <div class="member-main">
-        <div>
-          <div class="member-section-label">簡介</div>
-          <div class="member-bio">
-            （待補充）
-          </div>
-        </div>
-      </div>
-      <button class="member-close" onclick="closeMember('detail-5')">✕ 收合</button>
-    </div>
-  </div>
-
-  <div class="member-expand" id="detail-1">
-    <div class="member-profile">
-      <div class="member-sidebar">
-        <div class="member-avatar">👨‍💻</div>
-        <div class="member-name">林瓏穎 LungYing</div>
-        <div class="member-title">技術長</div>
-        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
-          <span class="skill-tag">客製化人工智慧技術</span>
-        </div>
-      </div>
-      <div class="member-main">
-        <div>
-          <div class="member-section-label">簡介</div>
-          <div class="member-bio">
-            （待補充）
-          </div>
-        </div>
-      </div>
-      <button class="member-close" onclick="closeMember('detail-1')">✕ 收合</button>
-    </div>
-  </div>
 
 </section>
 
