@@ -87,13 +87,16 @@
       </div>
     </div>
 
-    <div class="member-card reveal" style="cursor:default;">
+    <div class="member-card reveal" onclick="toggleMember(this, 'detail-4')">
       <div class="member-avatar">👨‍💻</div>
       <div class="member-name">曾建豫 Jacky Tseng</div>
       <div class="member-title">AI工程師</div>
       <div class="member-skills">
         <span class="skill-tag">知識推論設計</span>
         <span class="skill-tag">企業知識庫之AI工具開發</span>
+        <span class="skill-tag">影像辨識技術</span>
+        <span class="skill-tag">大數據應用</span>
+        <span class="skill-tag">大型語言模型</span>
       </div>
     </div>
 
@@ -118,6 +121,31 @@
   </div>
 
   <!-- 展開詳情（點擊後顯示） -->
+  <div class="member-expand" id="detail-4">
+    <div class="member-profile">
+      <div class="member-sidebar">
+        <div class="member-avatar">👨‍💻</div>
+        <div class="member-name">曾建豫 Jacky Tseng</div>
+        <div class="member-title">AI工程師</div>
+        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
+          <span class="skill-tag">知識推論設計</span>
+          <span class="skill-tag">企業知識庫之AI工具開發</span>
+          <span class="skill-tag">影像辨識技術</span>
+          <span class="skill-tag">大數據應用</span>
+          <span class="skill-tag">大型語言模型</span>
+        </div>
+      </div>
+      <div class="member-main">
+        <div>
+          <div class="member-section-label">簡介</div>
+          <div class="member-bio">
+            擁有資訊工程背景與 AI 技術開發經驗，擅長將人工智慧技術轉化為具體的產業解決方案。在技術層面擅長 Computer Vision (影像辨識) 與 LLM (大型語言模型) 服務框架的開發；目前專注於利用數據驅動技術與AI應用於環境相關議題。
+          </div>
+        </div>
+      </div>
+      <button class="member-close" onclick="closeMember('detail-4')">✕ 收合</button>
+    </div>
+  </div>
   <div class="member-expand" id="detail-2">
     <div class="member-profile">
       <div class="member-sidebar">
