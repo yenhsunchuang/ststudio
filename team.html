@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div class="member-card reveal" style="cursor:default;">
+    <div class="member-card reveal" onclick="toggleMember(this, 'detail-6')">
       <div class="member-avatar">👨‍💼</div>
       <div class="member-name">劉柏均 Bob Liu</div>
       <div class="member-title">財務管理師</div>
@@ -126,6 +126,31 @@
   </div>
 
   <!-- 展開詳情（點擊後顯示） -->
+  <div class="member-expand" id="detail-6">
+    <div class="member-profile">
+      <div class="member-sidebar">
+        <div class="member-avatar">👩‍💼</div>
+        <div class="member-name">劉柏均 Bob Liu</div>
+        <div class="member-title">財務管理師</div>
+        <div class="member-skills" style="justify-content:center; margin-top:1rem;">
+          <span class="skill-tag">機電整合</span>
+          <span class="skill-tag">3D模擬器</span>
+          <span class="skill-tag">雲端系統整合</span>
+          <span class="skill-tag">嵌入式系統</span>
+          <span class="skill-tag">Digital Twins</span>
+        </div>
+      </div>
+      <div class="member-main">
+        <div>
+          <div class="member-section-label">簡介</div>
+          <div class="member-bio">
+            專注於資產管理及投資分析，過去曾主導不動產投資分析及工程管理，並有實務現金流分析、槓桿操作與風險控管等多項財務經驗。協助管理公司的整體財務規劃及投資分析，並導入AI將投資決策系統化與模型化。以長期價值投資者的決策邏輯聚焦建構「AI 輔助價值投資決策系統」，進行企業內在價值評估與當前合理價格計算，以建立具紀律性與可持續優化的投資決策機制。
+          </div>
+        </div>
+      </div>
+      <button class="member-close" onclick="closeMember('detail-6')">✕ 收合</button>
+    </div>
+  </div>
   <div class="member-expand" id="detail-7">
     <div class="member-profile">
       <div class="member-sidebar">
@@ -148,7 +173,7 @@
           </div>
         </div>
       </div>
-      <button class="member-close" onclick="closeMember('detail-2')">✕ 收合</button>
+      <button class="member-close" onclick="closeMember('detail-7')">✕ 收合</button>
     </div>
   </div>
   <div class="member-expand" id="detail-1">
