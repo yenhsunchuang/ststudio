@@ -79,13 +79,16 @@
       </div>
     </div>
 
-    <div class="member-card reveal" style="cursor:default;">
+    <div class="member-card reveal" onclick="toggleMember(this, 'detail-3')">
       <div class="member-avatar">👨‍💻</div>
       <div class="member-name">王昱捷 Ethan Wang</div>
       <div class="member-title">AI工程師</div>
       <div class="member-skills">
-        <span class="skill-tag">後端系統開發</span>
-        <span class="skill-tag">AI工具開發</span>
+        <span class="skill-tag">雲端系統與伺服器管理</span>
+        <span class="skill-tag">RESTful API 後端開發</span>
+        <span class="skill-tag">影像辨識與物件偵測</span>
+        <span class="skill-tag">生成式人工智慧技術應用</span>
+        <span class="skill-tag">大型語言模型對話系統開發</span>   
       </div>
     </div>
 
@@ -128,6 +131,31 @@
   </div>
 
   <!-- 展開詳情（點擊後顯示） -->
+  <div class="member-expand" id="detail-3">
+    <div class="member-profile">
+      <div class="member-sidebar">
+        <div class="member-avatar">👨‍💻</div>
+        <div class="member-name">王昱捷 Ethan Wang</div>
+        <div class="member-title">AI工程師</div>
+        <div class="member-skills">
+          <span class="skill-tag">雲端系統與伺服器管理</span>
+          <span class="skill-tag">RESTful API 後端開發</span>
+          <span class="skill-tag">影像辨識與物件偵測</span>
+          <span class="skill-tag">生成式人工智慧技術應用</span>
+          <span class="skill-tag">大型語言模型對話系統開發</span>   
+        </div>
+      </div>
+      <div class="member-main">
+        <div>
+          <div class="member-section-label">簡介</div>
+          <div class="member-bio">
+            專長涵蓋程式設計與軟體開發、雲端系統與伺服器管理、資料分析與深度學習，以及大型語言模型對話系統開發 。過去具備後端工程師實務經驗，熟悉 RESTful API 開發，並能運用 AWS 服務（Lambda、API Gateway、Cloudwatch）進行系統佈署與監控 。擁有豐富的產學合作經驗，能將深度學習與大型語言模型技術有效落地應用於環境保護、智慧製造與雲端電網等跨領域專案中 
+          </div>
+        </div>
+      </div>
+      <button class="member-close" onclick="closeMember('detail-6')">✕ 收合</button>
+    </div>
+  </div>
   <div class="member-expand" id="detail-6">
     <div class="member-profile">
       <div class="member-sidebar">
