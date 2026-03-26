@@ -22,8 +22,12 @@
     <li><a href="projects.html">過去實績</a></li>
     <li><a href="awards.html" class="active">競賽榮譽</a></li>
     <li><a href="team.html">團隊夥伴</a></li>
+    <li class="nav-mobile-cta"><a href="index.html#contact" class="nav-cta-mobile">聯絡我們</a></li>
   </ul>
   <a href="index.html#contact" class="nav-cta">聯絡我們</a>
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- PAGE HEADER -->
@@ -140,6 +144,18 @@
     nav.style.borderBottomColor = window.scrollY > 50
       ? 'rgba(46,130,160,0.25)'
       : 'rgba(46,130,160,0.12)';
+  });
+  
+  // Hamburger menu
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+    document.querySelector('.hamburger').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+    });
   });
 </script>
 </body>
