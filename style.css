@@ -538,7 +538,7 @@ section { padding: 6rem 6%; }
 }
 .product-name {
   font-family: 'Sora', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: var(--text);
@@ -1169,25 +1169,18 @@ footer {
   .about-visual { display: none; }
   h1 { font-size: 2.4rem; }
   nav { padding: 1rem 4%; }
-  /* 選單展開時 nav 變全螢幕不透明 */
-  nav.menu-open {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: #FAFAF8;
-    backdrop-filter: none;
-    flex-wrap: wrap;
-    align-content: flex-start;
-  }
-  .hamburger { display: flex; z-index: 10001; }
+  .hamburger { display: flex; position: relative; z-index: 102; }
   .nav-links {
     display: none !important;
-    width: 100%;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%; height: 100vh;
+    background: #FAFAF8;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    flex-grow: 1;
-    padding: 3rem 0;
+    z-index: 101;
   }
   .nav-links.open { display: flex !important; }
   .nav-links a { font-size: 1.2rem; text-transform: none; }
