@@ -538,7 +538,7 @@ section { padding: 6rem 6%; }
 }
 .product-name {
   font-family: 'Sora', sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: var(--text);
