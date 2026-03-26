@@ -1169,20 +1169,28 @@ footer {
   .about-visual { display: none; }
   h1 { font-size: 2.4rem; }
   nav { padding: 1rem 4%; }
-  .hamburger { display: flex; }
-  .nav-links {
-    display: none;
+  /* 選單展開時 nav 變全螢幕不透明 */
+  nav.menu-open {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--bg);
+    background: #FAFAF8;
+    backdrop-filter: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  .hamburger { display: flex; z-index: 10001; }
+  .nav-links {
+    display: none !important;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    z-index: 10000;
+    flex-grow: 1;
+    padding: 3rem 0;
   }
-  .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.2rem; }
+  .nav-links.open { display: flex !important; }
+  .nav-links a { font-size: 1.2rem; text-transform: none; }
   .nav-cta { display: none; }
   .nav-mobile-cta { display: list-item; list-style: none; }
   .nav-cta-mobile {
