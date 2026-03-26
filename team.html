@@ -420,6 +420,17 @@
       ? 'rgba(46,130,160,0.25)'
       : 'rgba(46,130,160,0.12)';
   });
+  // Hamburger menu
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+    document.querySelector('.hamburger').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('open');
+      document.querySelector('.hamburger').classList.remove('open');
+    });
+  });
 </script>
 </body>
 </html>
