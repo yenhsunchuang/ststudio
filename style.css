@@ -61,6 +61,7 @@ nav {
 }
 
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-mobile-cta { display: none; }
 .nav-links a {
   font-family: 'Sora', sans-serif;
   font-size: 0.85rem;
@@ -1126,6 +1127,29 @@ footer {
   transform: none;
 }
 
+/* ── HAMBURGER MENU ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .team-grid { grid-template-columns: 1fr; }
@@ -1135,7 +1159,8 @@ footer {
   .hero-stats { display: none; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .products-layout { grid-template-columns: 1fr; }
-  .products-right-col { display: none; }
+  .products-marquee-wrap { display: none; }
+  .product-detail-panel { height: auto; min-height: 300px; }
   .partners-strip { grid-template-columns: repeat(2,1fr); }
   .exp-item { grid-template-columns: minmax(min-content, 180px) 1fr; }
 }
@@ -1144,6 +1169,31 @@ footer {
   .about-visual { display: none; }
   h1 { font-size: 2.4rem; }
   nav { padding: 1rem 4%; }
-  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 1000;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1.2rem; }
+  .nav-cta { display: none; }
+  .nav-mobile-cta { display: list-item; list-style: none; }
+  .nav-cta-mobile {
+    display: inline-block;
+    font-family: 'Sora', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--amber);
+    text-decoration: none;
+    margin-top: 0.5rem;
+  }
   .page-header { padding: 7rem 4% 2.5rem; }
+  .products-grid { grid-template-columns: 1fr; }
 }
