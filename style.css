@@ -359,6 +359,8 @@ section { padding: 6rem 6%; }
 .about-text p {
   color: var(--muted);
   font-size: 1.15rem;
+  text-align: justify;
+  text-justify: inter-character;
   line-height: 2;
   margin-bottom: 1.4rem;
 }
